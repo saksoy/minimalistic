@@ -1,0 +1,45 @@
+<nav id="menu">
+	<ul>
+		<li class="avatar">
+		<img src="/static/dist/img/{{site.avatar}}" alt="my avatar" />
+		<span class="social">
+			{% if site.twitter %}<a href="{{site.twitter}}" class="icon-twitter" target="_blank"></a>{% endif %}
+			{% if site.github %}<a href="{{site.github}}" class="icon-github" target="_blank"></a>{% endif %}
+			{% if site.email%}<a href="mailto:{{site.email}}" class="icon-mail" target="_blank"></a>{% endif %}
+			<a href="/feed.xml" class="icon-feed" target="_blank"></a>
+		</span>
+		</li>
+		<li class="">
+		<a>About</a>
+		<ul>
+			<li class="about">
+			<span>
+				{{site.about}}
+			</span>
+			</li>
+		</ul>
+		</li>
+		<li class="posts">
+		<a >Posts</a>
+		{% if site.posts %}
+		<ul>
+			{% assign of = 0 %}
+			{% for i in (1..paginator.total_pages) %}
+			<li>
+			<a>Page {{i}}</a>
+			<ul>
+				{% for post in site.posts limit:paginator.per_page offset:of %}
+				<li class="clearfix">
+				<a href="{{site.url}}{{post.url}}">{{post.title}}</a>
+				<span style="float: right">{{post.date | date:"%B %d, %Y"}}</span>
+				</li>
+				{% endfor %}
+				{% assign of = of | plus: paginator.per_page %}
+			</ul>
+			</li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+		</li>
+	</ul>
+</nav>
