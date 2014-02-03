@@ -4,10 +4,23 @@ layout: default
 <div id="post">
 	<article class="post">
 		<h1 class="post-title"><a href="{{page.url}}">{{page.title}}</a></h1>
+		<time style="color: grey">{{ page.date | date: "%B %d, %Y" }}</time>
 		<div class="post-content">
 			{{ content }}
 		</div>
-		<footer class="post-footer">{{ page.date | date: "%B %d, %Y" }}</footer>
+		<footer class="post-footer">
+			{% if page.tags %}
+			<ul>
+			<li>
+				<span class="icon-tag"></span>
+			</li>
+			{% for tag in page.tags %} 
+			<li>{{tag}}</li>
+			{% endfor %}
+			</ul>
+			{% endif %}
+		</footer>
 	</article>
 </div>
+<div id="disqus_thread"></div>
 
