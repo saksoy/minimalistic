@@ -13,12 +13,27 @@
 		<a>About</a>
 		<ul>
 			<li class="about">
-			<span>
 				{{site.about}}
-			</span>
 			</li>
 		</ul>
 		</li>
+		<li>
+			<a>Tags</a>
+			<ul>
+				{% for tag in site.tags %}
+					{% assign t = tag | first %}
+					<li>
+						<a>{{t}}</a>
+						<ul>
+							{% for post_tag in site.tags.[t] %}
+								<li><a href="{{site.url}}{{post_tag.url}}">{{post_tag.title}}</a></li>
+							{% endfor %}
+						</ul>
+					</li>
+				{% endfor %}
+			</ul>
+		</li>
+		{% if paginator.total_pages %}
 		<li class="posts">
 		<a >Posts</a>
 		{% if site.posts %}
@@ -41,5 +56,18 @@
 		</ul>
 		{% endif %}
 		</li>
+		{% else  %}
+		<li class="related-posts">
+			<a>Related posts</a>
+			<ul>
+				{% for post in site.related_posts %}
+					<li class="clearfix">
+					<a href="{{site.url}}{{post.url}}">{{post.title}}</a>
+					<span style="float: right">{{post.date | date:"%B %d, %Y"}}</span>
+					</li>
+				{% endfor %}
+			</ul>
+		</li>
+		{% endif %}
 	</ul>
 </nav>

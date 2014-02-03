@@ -1,6 +1,41 @@
 #content {
 	@include media($mobile) {
+
 		padding: 0 5px;
 		padding-bottom: 20px;
+		header {
+			padding: 20px 0;
+			a.menu-button {
+				font-size: 15px;
+			}
+			h1 {
+				font-size:1.5em;
+			}
+			h2 {
+				font-size:1em;
+			}
+		}
+		#posts,#post {
+			article.post {
+				margin-top: 30px;
+				h1.post-title {
+					font-size:1.5em;
+				}
+				div.post-content {
+					margin: 20px 0;
+					font-size:12px;
+					line-height: 20px;
+				}
+				footer.post-footer {
+					font-size: 10px;
+					padding-bottom: 20px;
+					ul {
+						li {
+							padding: 0 5px;
+						}
+					}
+				}
+			}
+		}
 	}
 }

@@ -14,12 +14,13 @@
 		<div id="content">
 			<!-- selects $("[data-headroom]") -->
 			<header class="headroom headroom--unpinned">
-				<a href="#menu" class="icon-list menu-button"></a>
+				<a href="#menu" class="icon-reorder menu-button"></a>
 				<h1><a href="/">{{site.name}}</a></h1>
 				<h2>{{site.description}}</h2>
 			</header>
 			{{ content }}
 		</div>
+		{% include disqus.html %}
 		<script>
 		$(document).ready(function() {
 			$('nav#menu').mmenu({

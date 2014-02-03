@@ -1,12 +1,17 @@
 name: Your New Jekyll Site
-disqus_shortname: detailyang
+disqus_short_name: detailyang 
 avatar: header.jpg
 description: a very very easy person
-about: <p>This Guy Like Freedom And Simpleness</p>
 paginate: 5
 twitter: https://twitter.com/detailyang
 github: https://github.com/detailyang
 email: detailyang@gmail.com
 markdown: redcarpet
 pygments: true
+about: <p>This guy is liberal and minimalist</p>
+       <p>This guy likes freedom and simpleness</p> 
+       <p>This guy chases free and simplicity</p>
+       <p>If you want to cantact this guy, please email him</p>
+
+       
 
