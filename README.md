@@ -12,15 +12,15 @@ git clone git@github.com:detailyang/minimalistic.git
 please set the variables as follow in config.yaml:
 
 ```
-name: 
-disqus_short_name:  
+name:              //site's name
+disqus_short_name: //disqus name, if you neednt comment, let it null 
 avatar: header.jpg //it's your avatar, which should be on static/src/img/
-description: 
-paginate: 
-twitter: 
-github: 
-email: 
-about: 
+description:       //site's description
+paginate:          //pagination, 5 is better choice
+twitter:           //twitter's url, https:://twitter.com/xxx
+github:            //github's url
+email:             //your email
+about:             //your personal infomation
 ```
 
 #How to develop
