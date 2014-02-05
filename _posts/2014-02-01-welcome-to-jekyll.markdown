@@ -3,7 +3,7 @@ layout: post
 title:  "Welcome to Jekyll!"
 date:   2014-02-01 20:28:16
 comments: true
-tags: update random fuck
+tags: tag1 tag2 tag3 tag4
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
